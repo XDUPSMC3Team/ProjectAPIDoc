@@ -137,7 +137,8 @@ GET /product/{productId}
         "description": "very good",
         "status": 0,
         "createTime": "2018-12-08 15:43:57",
-        "updateTime": "2018-12-08 15:44:55"
+        "updateTime": "2018-12-08 15:44:55",
+        "collectId": 2
     }
 }
 ```
@@ -146,6 +147,7 @@ GET /product/{productId}
 
 ```
 同上“所有商品”
+collectId 只有用buyer身份访问此接口才会有
 ```
 
 ## 搜索商品
