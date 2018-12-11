@@ -239,19 +239,100 @@ GET /buyer/collectShop/{shopId}
 }
 ```
 
-## 查看我收藏的商品 TODO
+## 查看我收藏的商品 
 
 ```
 GET /buyer/collectProd
 ```
 
+参数
 
+```
+pageNo int optional
+pageSize int optional
+```
 
-## 查看我收藏的店铺 TODO
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "content": [
+            {
+                "id": 1,
+                "shopId": 1,
+                "categoryId": 1,
+                "name": "Apple Iphone XS Max",
+                "pic": "www.baidu.com",
+                "attributeList": "{"内存":["64G", "128G"], "颜色":["金色","深空银色", "银色"]}",
+                "description": "very good",
+                "status": 0,
+                "createTime": "2018-12-08 15:43:57",
+                "updateTime": "2018-12-08 15:44:55"
+            }
+        ],
+        "last": true,
+        "totalPages": 1,
+        "totalElements": 1,
+        "size": 10,
+        "number": 0,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 1
+    }
+}
+```
+
+## 查看我收藏的店铺 
 
 ```
 GET /buyer/collectShop
 ```
+
+参数
+
+```
+pageNo int optional
+pageSize int optional
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "content": [
+            {
+                "id": 1,
+                "sellerId": 1,
+                "shopName": "Apple",
+                "shopDesc": "gay gay wang",
+                "phone": "123123132",
+                "email": "1187@qq.com",
+                "status": 0,
+                "createTime": "2018-12-08 15:46:41",
+                "updateTime": "2018-12-08 15:47:08"
+            }
+        ],
+        "last": true,
+        "totalElements": 1,
+        "totalPages": 1,
+        "size": 10,
+        "number": 0,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 1
+    }
+}
+```
+
+
+
+
 
 
 
