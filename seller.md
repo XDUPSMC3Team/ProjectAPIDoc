@@ -47,7 +47,25 @@ POST /seller/login
     "data": ""
 }
 ```
+## 找回密码
+```
+POST /seller/password/{email}
+```
 
+参数
+
+```
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": "send success"
+}
+```
 ## 添加商品
 ```
 POST /seller/product
@@ -351,4 +369,55 @@ POST /seller/productSpecs
     "msg": "success",
     "data":""
 }
+```
+
+# 查询所有的productSpecs
+```
+GET /product/productSpecs
+```
+
+参数
+
+```
+pageNo int 页码 optional
+pageSize int 每页大小 optional
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data":{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "content": [
+            {
+                "id": 1,
+                "productId": 1,
+                "detail": "{\"颜色\":\"金色\",\"内存\":\"64G\",\"购买方式\":\"官方标配\"}",
+                "stock": 5,
+                "price": 9599,
+                "createTime": "2018-12-08 15:41:19",
+                "updateTime": "2018-12-08 15:43:43"
+            }
+        ],
+        "totalElements": 1,
+        "last": true,
+        "totalPages": 1,
+        "size": 10,
+        "number": 0,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 1
+    }
+}
+}
+```
+
+字段解释
+
+```
 ```
