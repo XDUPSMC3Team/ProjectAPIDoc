@@ -7,6 +7,7 @@ POST /seller/register
 
 ```
 {
+     "username":string,
     "realName":string
     "phone":string
     "email": string
@@ -79,7 +80,6 @@ POST /seller/product
     shopId:(int)    // shopid
     name:"",    // 商品名称
     pic:"",    // 商品图片
-    price: (double) // 商品价格
     description:"",   // 商品描述
     attributeList:"", // 属性选项
 }
@@ -414,6 +414,150 @@ pageSize int 每页大小 optional
         "numberOfElements": 1
     }
 }
+}
+```
+
+字段解释
+
+```
+```
+
+# 根据productId查询所有的productSpecs
+```
+GET /product/productSpecs/{productId}
+```
+
+参数
+
+```
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data":{
+    "code": 0,
+    "msg": "success",
+    "data": [
+            {
+                "id": 1,
+                "productId": 1,
+                "detail": "{\"颜色\":\"金色\",\"内存\":\"64G\",\"购买方式\":\"官方标配\"}",
+                "stock": 5,
+                "price": 9599,
+                "createTime": "2018-12-08 15:41:19",
+                "updateTime": "2018-12-08 15:43:43"
+            }
+        ]
+    }
+}
+}
+```
+
+字段解释
+
+```
+```
+
+# 所有商品
+
+```
+GET /product/products
+```
+
+参数
+
+```
+pageNo int 页码 optional
+pageSize int 每页大小 optional
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "content": [
+            {
+                "id": 1,
+                "shopId": 1,
+                "categoryId": 1,
+                "name": "Apple Iphone XS Max",
+                "pic": "www.baidu.com",
+                "attributeList": "{"内存":["64G", "128G"], "颜色":["金色","深空银色", "银色"]}",
+                "description": "very good",
+                "status": 0,
+                "createTime": "2018-12-08 15:43:57",
+                "updateTime": "2018-12-08 15:44:55"
+            }
+        ],
+        "last": true,
+        "totalPages": 1,
+        "totalElements": 1,
+        "size": 10,
+        "number": 0,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 1
+    }
+}
+```
+
+字段解释
+
+```
+id 商品id
+categoryId 类别id
+attributeList 属性项列表
+```
+
+# 所有shop 信息
+
+```
+GET /shop/shops
+```
+
+参数
+
+```
+pageNo int 页码 optional
+pageSize int 每页大小 optional
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "content": [
+            {
+                "id": 1,
+                "sellerId": 1,
+                "shopName": "Apple",
+                "shopDesc": "gay gay wang",
+                "phone": "123123132",
+                "email": "1187@qq.com",
+                "status": 0,
+                "createTime": "2018-12-08 15:46:41",
+                "updateTime": "2018-12-08 15:47:08"
+            }
+        ],
+        "last": true,
+        "totalPages": 1,
+        "totalElements": 1,
+        "size": 10,
+        "number": 0,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 1
+    }
 }
 ```
 
