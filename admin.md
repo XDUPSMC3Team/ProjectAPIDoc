@@ -81,10 +81,10 @@ xxx: xxxxxx
 
 ## 通过申请
 ```
-POST /admin/personal/approve
+POST /admin/personal/approve/{shopId}
 ```
 
-参数
+参数(包含在路径)
 
 ```
 shopId integer
@@ -107,10 +107,10 @@ xxx: xxxxxx
 
 ## 拒绝申请
 ```
-POST /admin/personal/reject
+POST /admin/personal/reject/{shopId}
 ```
 
-参数
+参数(包含在路径)
 
 ```
 shopId integer
@@ -132,10 +132,10 @@ xxx: xxxxxx
 ```
 ## 搜索店铺
 ```
-GET /admin/personal/search
+GET /admin/personal/search/{shopId}
 ```
 
-参数
+参数(包含在路径)
 
 ```
 shopId integer
@@ -158,10 +158,10 @@ xxx: xxxxxx
 
 ## 关闭店铺
 ```
-POST /admin/personal/close
+POST /admin/personal/close/{shopId}
 ```
 
-参数
+参数(包含在路径)
 
 ```
 shopId integer
