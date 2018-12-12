@@ -565,3 +565,74 @@ pageSize int 每页大小 optional
 
 ```
 ```
+# 根据shopId 查询 所有的products 信息
+
+```
+GET /seller/products/{shopId}
+```
+
+参数
+
+```
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": [
+        {
+            "id": 1,
+            "shopId": 1,
+            "categoryId": 1,
+            "name": "Apple Iphone XS Max",
+            "pic": "http://cdn.helloyzy.cn/iphone.jpg",
+            "attributeList": "{\"内存\":[\"64G\", \"128G\"], \"颜色\":[\"金色\",\"深空银色\", \"银色\"]}",
+            "description": "very good",
+            "status": 0,
+            "createTime": "2018-12-08 15:43:57",
+            "updateTime": "2018-12-08 15:44:55"
+        }
+    ]
+}
+```
+字段解释
+
+```
+```
+# 根据sellerId 查询 shop 信息
+
+```
+GET /seller/shop/{sellerId}
+```
+
+参数
+
+```
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "id": 1,
+        "sellerId": 1,
+        "shopName": "Apple",
+        "shopDesc": "gay gay wang",
+        "phone": "123123132",
+        "email": "1187@qq.com",
+        "status": 0,
+        "createTime": "2018-12-08 15:46:41",
+        "updateTime": "2018-12-08 15:47:08"
+    }
+}
+```
+字段解释
+
+```
+```
