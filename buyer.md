@@ -453,6 +453,135 @@ pageSize int optional
 
 
 
+## 添加商品到购物车
+
+```
+POST /buyer/addCart
+```
+
+参数
+
+```
+specsId int required //选择商品具体属性后，返回了价格、库存，也就是特定型号id
+amount int required
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": null
+}
+```
+
+## 查看购物车
+
+```
+GET /buyer/viewCart
+```
+
+参数
+
+```
+无
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": [
+        {
+            "id": 3,
+            "productId": 14,
+            "specsId": 25,
+            "name": "PS4",
+            "detail": "{\"Color\":\"black\",\"Memory\":\"512GB\",\"Payment\":\"Alipay\"}",
+            "price": 2600,
+            "amount": 2,
+            "createTime": "2018-12-19 20:41:56",
+            "updateTime": "2018-12-19 20:41:56"
+        }
+    ]
+}
+```
+
+参数说明
+
+```
+此处的id，在之后update和delete中作为cartId使用，即购物车条目ID
+```
+
+## 更新购物车中某商品的数量
+
+```
+GET /buyer/updateCart/{cartId}
+```
+
+参数
+
+```
+amount int required (>=1)
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": null
+}
+```
+
+## 从购物车中移除商品
+
+```
+DELETE /buyer/deleteCart/{cartId}
+```
+
+参数
+
+```
+无
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": null
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
