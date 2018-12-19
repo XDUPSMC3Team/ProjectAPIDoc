@@ -384,6 +384,75 @@ DELETE /buyer/collectShop/{collectId} // 此处collectId为收藏表的主键
 
 
 
+## 按分类查看商品
+
+```
+GET /product/byCategory/{categoryId}
+```
+
+参数
+
+```
+pageNo int optional
+pageSize int optional
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "content": [
+            {
+                "id": 25,
+                "shopId": 1,
+                "categoryId": 3,
+                "name": "iPhone 8",
+                "pic": "http://119.23.75.180/2018/12/18/40b57cea-7f3d-4fbe-a414-6d4e85cc5f6b.png",
+                "attributeList": "{\"Color\":[\"red\",\"gold\"],\"Memory\":[\"64G\",\"128G\"],\"Payment\":[\"WeChat\",\"Alipay\"]}",
+                "description": "iPhone 8",
+                "status": 0,
+                "createTime": "2018-12-18 22:22:01",
+                "updateTime": "2018-12-18 22:22:01"
+            },
+            {
+                "id": 23,
+                "shopId": 1,
+                "categoryId": 3,
+                "name": "MacBook Pro",
+                "pic": "http://119.23.75.180/2018/12/13/9ac4fffa-e7fc-4a9b-b702-8c9627be3938.png",
+                "attributeList": "{\"Color\":[\"silver\"],\"Memory\":[\"128G\",\"512G\",\"1TB\"],\"Payment\":[\"Wechat\",\"Alipay\"]}",
+                "description": "MacBook Pro",
+                "status": 0,
+                "createTime": "2018-12-13 01:33:32",
+                "updateTime": "2018-12-13 01:33:32"
+            },
+        ],
+        "last": false,
+        "totalElements": 14,
+        "totalPages": 2,
+        "size": 10,
+        "number": 0,
+        "sort": [
+            {
+                "direction": "DESC",
+                "property": "id",
+                "ignoreCase": false,
+                "nullHandling": "NATIVE",
+                "ascending": false,
+                "descending": true
+            }
+        ],
+        "first": true,
+        "numberOfElements": 10
+    }
+}
+```
+
+
+
 
 
 
