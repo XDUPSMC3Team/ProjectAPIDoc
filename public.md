@@ -39,7 +39,7 @@ file: (file 对象)  // 上传的图片
 ## 根据 detail 查询 productSpecs
 
 ```
-get /product/productSpecs/{productId}/detail
+get /product/productSpecs/detail/{productId}
 ```
 参数
 ```
