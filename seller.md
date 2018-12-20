@@ -735,9 +735,27 @@ get /seller/shop/payedOrder/{shopId}
 {
     "code": 0,
     "msg": "success",
-    "data"[{
-        
-    }]:
+    "data": [
+        {
+            "id": 1,
+            "buyerId": 4,
+            "receiverName": "wxj",
+            "money": 24000,
+            "status": 0,
+            "payStatus": 1,
+            "receiveTime": null,
+            "createTime": "2018-12-20 13:57:25",
+            "updateTime": "2018-12-20 13:57:25",
+            "orderDetailDataList": [
+                {
+                    "productId": 25,
+                    "productName": "iPhone 8",
+                    "amount": 3,
+                    "price": 8000
+                }
+            ]
+        }
+    ]
 }
 ```
 字段解释
