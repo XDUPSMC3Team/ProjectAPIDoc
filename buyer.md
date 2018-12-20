@@ -384,6 +384,204 @@ DELETE /buyer/collectShop/{collectId} // 此处collectId为收藏表的主键
 
 
 
+## 按分类查看商品
+
+```
+GET /product/byCategory/{categoryId}
+```
+
+参数
+
+```
+pageNo int optional
+pageSize int optional
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "content": [
+            {
+                "id": 25,
+                "shopId": 1,
+                "categoryId": 3,
+                "name": "iPhone 8",
+                "pic": "http://119.23.75.180/2018/12/18/40b57cea-7f3d-4fbe-a414-6d4e85cc5f6b.png",
+                "attributeList": "{\"Color\":[\"red\",\"gold\"],\"Memory\":[\"64G\",\"128G\"],\"Payment\":[\"WeChat\",\"Alipay\"]}",
+                "description": "iPhone 8",
+                "status": 0,
+                "createTime": "2018-12-18 22:22:01",
+                "updateTime": "2018-12-18 22:22:01"
+            },
+            {
+                "id": 23,
+                "shopId": 1,
+                "categoryId": 3,
+                "name": "MacBook Pro",
+                "pic": "http://119.23.75.180/2018/12/13/9ac4fffa-e7fc-4a9b-b702-8c9627be3938.png",
+                "attributeList": "{\"Color\":[\"silver\"],\"Memory\":[\"128G\",\"512G\",\"1TB\"],\"Payment\":[\"Wechat\",\"Alipay\"]}",
+                "description": "MacBook Pro",
+                "status": 0,
+                "createTime": "2018-12-13 01:33:32",
+                "updateTime": "2018-12-13 01:33:32"
+            },
+        ],
+        "last": false,
+        "totalElements": 14,
+        "totalPages": 2,
+        "size": 10,
+        "number": 0,
+        "sort": [
+            {
+                "direction": "DESC",
+                "property": "id",
+                "ignoreCase": false,
+                "nullHandling": "NATIVE",
+                "ascending": false,
+                "descending": true
+            }
+        ],
+        "first": true,
+        "numberOfElements": 10
+    }
+}
+```
+
+
+
+## 添加商品到购物车
+
+```
+POST /buyer/addCart
+```
+
+参数
+
+```
+specsId int required //选择商品具体属性后，返回了价格、库存，也就是特定型号id
+amount int required
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": null
+}
+```
+
+## 查看购物车
+
+```
+GET /buyer/viewCart
+```
+
+参数
+
+```
+无
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": [
+        {
+            "id": 3,
+            "productId": 14,
+            "specsId": 25,
+            "name": "PS4",
+            "detail": "{\"Color\":\"black\",\"Memory\":\"512GB\",\"Payment\":\"Alipay\"}",
+            "price": 2600,
+            "amount": 2,
+            "createTime": "2018-12-19 20:41:56",
+            "updateTime": "2018-12-19 20:41:56"
+        }
+    ]
+}
+```
+
+参数说明
+
+```
+此处的id，在之后update和delete中作为cartId使用，即购物车条目ID
+```
+
+## 更新购物车中某商品的数量
+
+```
+GET /buyer/updateCart/{cartId}
+```
+
+参数
+
+```
+amount int required (>=1)
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": null
+}
+```
+
+## 从购物车中移除商品
+
+```
+DELETE /buyer/deleteCart/{cartId}
+```
+
+参数
+
+```
+无
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": null
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

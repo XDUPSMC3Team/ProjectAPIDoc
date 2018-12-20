@@ -67,7 +67,7 @@
 - create_time
 - update_time
 
-##c 商品属性key表
+##商品属性key表
 
 - id
 - category_id
@@ -83,9 +83,9 @@
 
 - id
 - buyer_id 用户id
-- product_id 商品id
+- product_id 泛指商品id
+- specs_id 特指商品id
 - amount 该商品数量
-- price 该商品单价 decimal(8,2)
 - create_time
 - update_time
 

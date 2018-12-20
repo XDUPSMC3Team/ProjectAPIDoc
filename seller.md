@@ -636,3 +636,138 @@ GET /seller/shop/{sellerId}
 
 ```
 ```
+# 更新商品小类 ProductSpecs
+
+```
+Post /seller/productSpecs/{productSpecsId}
+```
+
+参数
+
+```
+{
+    "id":(int),
+    "productId":(int),
+    "detail":"{"memory": "4G", "color": "red"}",
+    "stock":int,
+    "price":double
+}
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data":""
+}
+```
+字段解释
+
+```
+```
+
+# 查询某个商铺的盈利额
+
+```
+Post /seller/shop/income/{shopId}
+```
+
+参数
+
+```
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data":
+}
+```
+字段解释
+
+```
+```
+# 查看某个商铺的销售历史，即 已完成的订单
+
+```
+get /seller//shop/saleHistory/{shopId}
+```
+
+参数
+
+```
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data"[{
+
+    }]:
+}
+```
+字段解释
+
+```
+```
+# 查看某个商铺的所有已付款商品
+
+```
+get /seller/shop/payedOrder/{shopId}
+```
+
+参数
+
+```
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data"[{
+        
+    }]:
+}
+```
+字段解释
+
+```
+```
+
+# 修改以付款商品信息
+
+```
+POST /seller/shop/order/{masterId}
+```
+
+参数
+
+```
+"status":""
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data":"":
+}
+```
+字段解释
+
+```
+status 订单状态（0已下单/1已发货/2运输中/3已收货/4已评价/5退货中/6退货成功）
+```
