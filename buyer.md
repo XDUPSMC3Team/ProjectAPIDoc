@@ -560,6 +560,78 @@ DELETE /buyer/deleteCart/{cartId}
 }
 ```
 
+## 查看个人资料
+
+```
+GET /buyer/profile
+```
+
+参数
+
+```
+无
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "id": 4,
+        "username": "wxj",
+        "password": null,
+        "realName": null,
+        "phone": null,
+        "email": "331242812@qq.com",
+        "address": null,
+        "status": 0,
+        "createTime": "2018-12-19 17:40:30",
+        "updateTime": "2018-12-19 17:40:30"
+    }
+}
+```
+
+## 修改个人资料
+
+```
+POST /buyer/profile
+```
+
+参数
+
+```
+realname string optional
+phone string optional
+email string optional
+address string optional
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": null
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+## 直接下单
+
+## 从购物车中下单
+
 
 
 

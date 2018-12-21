@@ -96,7 +96,7 @@
 - receiver_name 收货人姓名
 - receiver_address 收货地址
 - money 总金额 decimal(8,2)
-- status 订单状态（0已下单/1已发货/2已收获/3已评价/4退货中/5退货成功）
+- status 订单状态（0已下单/1已发货/2已收货/3已评价/4退货中/5退货成功）
 - pay_status 支付状态 （0未支付/1已支付）
 - receive_time 收货时间
 - create_time （在这里可作为下单时间使用）
