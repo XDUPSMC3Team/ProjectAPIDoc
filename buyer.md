@@ -618,19 +618,141 @@ address string optional
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
 ## 直接下单
 
+```
+POST /buyer/order
+```
+
+参数
+
+```
+specsId int required
+amount int required
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": 1  // 这里为生成的订单ID
+}
+```
+
 ## 从购物车中下单
+
+## 查看订单列表
+
+```
+GET /buyer/order
+```
+
+参数
+
+```
+无
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": [
+        {
+            "id": 1,
+            "shopId": 1,
+            "money": 24000,
+            "status": 0,
+            "payStatus": 1,
+            "orderDetailList": [
+                {
+                    "productId": 25,
+                    "productName": "iPhone 8",
+                    "price": 8000,
+                    "amount": 3
+                }
+            ],
+            "receiveTime": null,
+            "createTime": "2018-12-20 13:57:25",
+            "updateTime": "2018-12-20 13:57:25"
+        }
+    ]
+}
+```
+
+字段解释
+
+```
+- status 订单状态（0已下单/1已发货/2已收货/3已评价/4退货中/5退货成功）
+- pay_status 支付状态 （0未支付/1已支付）
+```
+
+## 查看订单详情
+
+```
+GET /buyer/order/{orderId}
+```
+
+参数
+
+```
+无
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "id": 1,
+        "shopId": 1,
+        "shopName": "Apple",
+        "receiverName": "wxj",
+        "address": "America",
+        "money": 24000,
+        "status": 0,
+        "payStatus": 1,
+        "orderDetailList": [
+            {
+                "productId": 25,
+                "productName": "iPhone 8",
+                "price": 8000,
+                "amount": 3
+            }
+        ],
+        "receiveTime": null,
+        "createTime": "2018-12-20 13:57:25",
+        "updateTime": "2018-12-20 13:57:25"
+    }
+}
+```
+
+字段解释
+
+```
+- status 订单状态（0已下单/1已发货/2已收货/3已评价/4退货中/5退货成功）
+- pay_status 支付状态 （0未支付/1已支付）
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
