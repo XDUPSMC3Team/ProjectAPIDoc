@@ -808,6 +808,216 @@ PUT /order/{orderId}/confirm
 
 
 
+## 商铺列表
+
+```
+GET /shop/shops
+```
+
+参数
+
+```
+无
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "content": [
+            {
+                "id": 1,
+                "sellerId": 2,
+                "shopName": "Apple",
+                "shopDesc": "Apple",
+                "phone": "4006668800",
+                "email": "1187697635@qq.com",
+                "status": 1,
+                "createTime": "2018-12-12 23:43:33",
+                "updateTime": "2018-12-12 23:43:33"
+            },
+            {
+                "id": 2,
+                "sellerId": 3,
+                "shopName": "Sony",
+                "shopDesc": "Sony",
+                "phone": "123456",
+                "email": "1329176648@qq.com",
+                "status": 1,
+                "createTime": "2018-12-12 23:51:17",
+                "updateTime": "2018-12-12 23:51:17"
+            },
+            {
+                "id": 3,
+                "sellerId": 4,
+                "shopName": "HUAWEI",
+                "shopDesc": "HUAWEI",
+                "phone": "123456",
+                "email": "1430612146@qq.com",
+                "status": 1,
+                "createTime": "2018-12-12 23:52:03",
+                "updateTime": "2018-12-12 23:52:03"
+            },
+            {
+                "id": 4,
+                "sellerId": 5,
+                "shopName": "Electronic product",
+                "shopDesc": "Electronic product",
+                "phone": "123",
+                "email": "331242812@qq.com",
+                "status": 1,
+                "createTime": "2018-12-12 23:53:40",
+                "updateTime": "2018-12-12 23:53:40"
+            },
+            {
+                "id": 5,
+                "sellerId": 6,
+                "shopName": "OPPO",
+                "shopDesc": "OPPO",
+                "phone": "123",
+                "email": "772043237@qq.com",
+                "status": 1,
+                "createTime": "2018-12-12 23:54:22",
+                "updateTime": "2018-12-12 23:54:22"
+            },
+            {
+                "id": 6,
+                "sellerId": 7,
+                "shopName": "Samsung",
+                "shopDesc": "Samsung",
+                "phone": "123455",
+                "email": "NeXT-XLC@outlook.com",
+                "status": 1,
+                "createTime": "2018-12-12 23:55:32",
+                "updateTime": "2018-12-12 23:55:32"
+            },
+            {
+                "id": 7,
+                "sellerId": 8,
+                "shopName": "Razer",
+                "shopDesc": "Razer",
+                "phone": "1234555566",
+                "email": "595357438@qq.com",
+                "status": 1,
+                "createTime": "2018-12-12 23:58:17",
+                "updateTime": "2018-12-12 23:58:17"
+            },
+            {
+                "id": 8,
+                "sellerId": 9,
+                "shopName": "Vivo",
+                "shopDesc": "Vivo",
+                "phone": "1234",
+                "email": "12314",
+                "status": 0,
+                "createTime": "2018-12-18 22:25:45",
+                "updateTime": "2018-12-18 22:25:45"
+            }
+        ],
+        "last": true,
+        "totalElements": 8,
+        "totalPages": 1,
+        "size": 10,
+        "number": 0,
+        "sort": null,
+        "first": true,
+        "numberOfElements": 8
+    }
+}
+```
+
+## 商铺详情
+
+```
+GET /shop/{shopId}
+```
+
+参数
+
+```
+无
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "id": 1,
+        "sellerId": 2,
+        "shopName": "Apple",
+        "shopDesc": "Apple",
+        "phone": "4006668800",
+        "email": "1187697635@qq.com",
+        "status": 1,
+        "collectId": 0,
+        "products": [
+            {
+                "id": 20,
+                "shopId": 1,
+                "categoryId": 3,
+                "name": "iPad",
+                "pic": "http://119.23.75.180/2018/12/13/11c35cd7-411d-4e18-85e1-1a9f3b3c6576.png",
+                "attributeList": "{\"Color\":[\"gold\",\"black\"],\"Memory\":[\"64G\",\"128G\"],\"Payment\":[\"Wechat\",\"Alipay\"]}",
+                "description": "iPad",
+                "status": 0,
+                "createTime": "2018-12-13 01:29:22",
+                "updateTime": "2018-12-13 01:29:22"
+            },
+            {
+                "id": 21,
+                "shopId": 1,
+                "categoryId": 3,
+                "name": "iPod Touch",
+                "pic": "http://119.23.75.180/2018/12/13/1793d936-ba88-40dd-b6f4-4117ef07dbe9.png",
+                "attributeList": "{\"Color\":[\"gold\",\"blue\",\"red\"],\"Memory\":[\"64G\",\"128G\"],\"Payment\":[\"Wechat\",\"Alipay\"]}",
+                "description": "iPod Touch",
+                "status": 0,
+                "createTime": "2018-12-13 01:30:41",
+                "updateTime": "2018-12-13 01:30:41"
+            },
+            {
+                "id": 23,
+                "shopId": 1,
+                "categoryId": 3,
+                "name": "MacBook Pro",
+                "pic": "http://119.23.75.180/2018/12/13/9ac4fffa-e7fc-4a9b-b702-8c9627be3938.png",
+                "attributeList": "{\"Color\":[\"silver\"],\"Memory\":[\"128G\",\"512G\",\"1TB\"],\"Payment\":[\"Wechat\",\"Alipay\"]}",
+                "description": "MacBook Pro",
+                "status": 0,
+                "createTime": "2018-12-13 01:33:32",
+                "updateTime": "2018-12-13 01:33:32"
+            },
+            {
+                "id": 25,
+                "shopId": 1,
+                "categoryId": 3,
+                "name": "iPhone 8",
+                "pic": "http://119.23.75.180/2018/12/18/40b57cea-7f3d-4fbe-a414-6d4e85cc5f6b.png",
+                "attributeList": "{\"Color\":[\"red\",\"gold\"],\"Memory\":[\"64G\",\"128G\"],\"Payment\":[\"WeChat\",\"Alipay\"]}",
+                "description": "iPhone 8",
+                "status": 0,
+                "createTime": "2018-12-18 22:22:01",
+                "updateTime": "2018-12-18 22:22:01"
+            }
+        ],
+        "createTime": "2018-12-12 23:43:33",
+        "updateTime": "2018-12-12 23:43:33"
+    }
+}
+```
+
+
+
+
+
+
+
 
 
 
