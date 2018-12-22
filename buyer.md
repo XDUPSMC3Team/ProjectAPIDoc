@@ -250,8 +250,7 @@ GET /buyer/collectProd
 参数
 
 ```
-pageNo int optional
-pageSize int optional
+无
 ```
 
 返回
@@ -260,30 +259,23 @@ pageSize int optional
 {
     "code": 0,
     "msg": "success",
-    "data": {
-        "content": [
-            {
-                "id": 1,
-                "shopId": 1,
-                "categoryId": 1,
-                "name": "Apple Iphone XS Max",
-                "pic": "www.baidu.com",
-                "attributeList": "{"内存":["64G", "128G"], "颜色":["金色","深空银色", "银色"]}",
-                "description": "very good",
-                "status": 0,
-                "createTime": "2018-12-08 15:43:57",
-                "updateTime": "2018-12-08 15:44:55"
-            }
-        ],
-        "last": true,
-        "totalPages": 1,
-        "totalElements": 1,
-        "size": 10,
-        "number": 0,
-        "sort": null,
-        "first": true,
-        "numberOfElements": 1
-    }
+    "data": [
+        {
+            "id": 28,
+            "shopId": 4,
+            "shopName": null,
+            "shopDesc": null,
+            "categoryId": 3,
+            "name": "iphonex",
+            "pic": "http://119.23.75.180/2018/12/20/59f4c4ab-241a-497e-a0eb-c3a4c2846a8b.jpg",
+            "attributeList": "{\"Color\":[\"red\",\"blue\"],\"Memory\":[\"64G\",\"128G\"]}",
+            "description": "iphonex",
+            "status": 0,
+            "createTime": "2018-12-20 21:36:35",
+            "updateTime": "2018-12-20 21:36:35",
+            "collectId": 24
+        }
+    ]
 }
 ```
 
@@ -296,8 +288,7 @@ GET /buyer/collectShop
 参数
 
 ```
-pageNo int optional
-pageSize int optional
+无
 ```
 
 返回
@@ -306,29 +297,21 @@ pageSize int optional
 {
     "code": 0,
     "msg": "success",
-    "data": {
-        "content": [
-            {
-                "id": 1,
-                "sellerId": 1,
-                "shopName": "Apple",
-                "shopDesc": "gay gay wang",
-                "phone": "123123132",
-                "email": "1187@qq.com",
-                "status": 0,
-                "createTime": "2018-12-08 15:46:41",
-                "updateTime": "2018-12-08 15:47:08"
-            }
-        ],
-        "last": true,
-        "totalElements": 1,
-        "totalPages": 1,
-        "size": 10,
-        "number": 0,
-        "sort": null,
-        "first": true,
-        "numberOfElements": 1
-    }
+    "data": [
+        {
+            "id": 1,
+            "sellerId": 2,
+            "shopName": "Apple",
+            "shopDesc": "Apple",
+            "phone": "4006668800",
+            "email": "1187697635@qq.com",
+            "status": 1,
+            "collectId": 1,
+            "products": [],
+            "createTime": "2018-12-12 23:43:33",
+            "updateTime": "2018-12-12 23:43:33"
+        }
+    ]
 }
 ```
 
