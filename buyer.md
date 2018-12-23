@@ -726,7 +726,7 @@ GET /buyer/order/{orderId}
 ## 支付订单
 
 ```
-PUT /order/{orderId}/pay
+PUT /buyer/order/{orderId}/pay
 ```
 
 参数
@@ -748,7 +748,7 @@ PUT /order/{orderId}/pay
 ## 取消订单
 
 ```
-PUT /order/{orderId}/cancel
+PUT /buyer/order/{orderId}/cancel
 ```
 
 参数
@@ -770,7 +770,7 @@ PUT /order/{orderId}/cancel
 ## 确认收货
 
 ```
-PUT /order/{orderId}/confirm
+PUT /buyer/order/{orderId}/confirm
 ```
 
 参数
