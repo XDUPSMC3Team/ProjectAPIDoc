@@ -866,9 +866,204 @@ Get /seller/shop/saleHistory/date/{shopId}
 {
     "code": 0,
     "msg": "success",
-    "data":{
-
-    }:
+    "data": {
+        "daily": [],
+        "weekly": [
+            {
+                "id": 38,
+                "buyerId": 2,
+                "receiverName": "HelloWorld",
+                "address": "Pornhub",
+                "shopName": "Apple",
+                "money": 2300,
+                "status": 3,
+                "payStatus": 1,
+                "receiveTime": "2018-12-27 23:00:21",
+                "createTime": "2018-12-26 08:49:48",
+                "updateTime": "2018-12-26 16:39:45",
+                "orderDetailDataList": [
+                    {
+                        "productId": 21,
+                        "productName": "iPod Touch",
+                        "amount": 1,
+                        "price": 2300
+                    }
+                ]
+            },
+            {
+                "id": 39,
+                "buyerId": 2,
+                "receiverName": "HelloWorld",
+                "address": "Road XiFenglu",
+                "shopName": "Apple",
+                "money": 8000,
+                "status": 3,
+                "payStatus": 1,
+                "receiveTime": "2018-12-27 23:00:23",
+                "createTime": "2018-12-26 16:00:08",
+                "updateTime": "2018-12-26 16:35:24",
+                "orderDetailDataList": [
+                    {
+                        "productId": 25,
+                        "productName": "iPhone 8",
+                        "amount": 1,
+                        "price": 8000
+                    }
+                ]
+            },
+            {
+                "id": 44,
+                "buyerId": 3,
+                "receiverName": "lgd",
+                "address": "123",
+                "shopName": "Apple",
+                "money": 8000,
+                "status": 3,
+                "payStatus": 1,
+                "receiveTime": "2018-12-27 23:00:28",
+                "createTime": "2018-12-26 17:34:06",
+                "updateTime": "2018-12-26 17:40:26",
+                "orderDetailDataList": [
+                    {
+                        "productId": 25,
+                        "productName": "iPhone 8",
+                        "amount": 1,
+                        "price": 8000
+                    }
+                ]
+            }
+        ],
+        "monthly": [
+            {
+                "id": 38,
+                "buyerId": 2,
+                "receiverName": "HelloWorld",
+                "address": "Pornhub",
+                "shopName": "Apple",
+                "money": 2300,
+                "status": 3,
+                "payStatus": 1,
+                "receiveTime": "2018-12-27 23:00:21",
+                "createTime": "2018-12-26 08:49:48",
+                "updateTime": "2018-12-26 16:39:45",
+                "orderDetailDataList": [
+                    {
+                        "productId": 21,
+                        "productName": "iPod Touch",
+                        "amount": 1,
+                        "price": 2300
+                    }
+                ]
+            },
+            {
+                "id": 39,
+                "buyerId": 2,
+                "receiverName": "HelloWorld",
+                "address": "Road XiFenglu",
+                "shopName": "Apple",
+                "money": 8000,
+                "status": 3,
+                "payStatus": 1,
+                "receiveTime": "2018-12-27 23:00:23",
+                "createTime": "2018-12-26 16:00:08",
+                "updateTime": "2018-12-26 16:35:24",
+                "orderDetailDataList": [
+                    {
+                        "productId": 25,
+                        "productName": "iPhone 8",
+                        "amount": 1,
+                        "price": 8000
+                    }
+                ]
+            },
+            {
+                "id": 44,
+                "buyerId": 3,
+                "receiverName": "lgd",
+                "address": "123",
+                "shopName": "Apple",
+                "money": 8000,
+                "status": 3,
+                "payStatus": 1,
+                "receiveTime": "2018-12-27 23:00:28",
+                "createTime": "2018-12-26 17:34:06",
+                "updateTime": "2018-12-26 17:40:26",
+                "orderDetailDataList": [
+                    {
+                        "productId": 25,
+                        "productName": "iPhone 8",
+                        "amount": 1,
+                        "price": 8000
+                    }
+                ]
+            }
+        ],
+        "yearly": [
+            {
+                "id": 38,
+                "buyerId": 2,
+                "receiverName": "HelloWorld",
+                "address": "Pornhub",
+                "shopName": "Apple",
+                "money": 2300,
+                "status": 3,
+                "payStatus": 1,
+                "receiveTime": "2018-12-27 23:00:21",
+                "createTime": "2018-12-26 08:49:48",
+                "updateTime": "2018-12-26 16:39:45",
+                "orderDetailDataList": [
+                    {
+                        "productId": 21,
+                        "productName": "iPod Touch",
+                        "amount": 1,
+                        "price": 2300
+                    }
+                ]
+            },
+            {
+                "id": 39,
+                "buyerId": 2,
+                "receiverName": "HelloWorld",
+                "address": "Road XiFenglu",
+                "shopName": "Apple",
+                "money": 8000,
+                "status": 3,
+                "payStatus": 1,
+                "receiveTime": "2018-12-27 23:00:23",
+                "createTime": "2018-12-26 16:00:08",
+                "updateTime": "2018-12-26 16:35:24",
+                "orderDetailDataList": [
+                    {
+                        "productId": 25,
+                        "productName": "iPhone 8",
+                        "amount": 1,
+                        "price": 8000
+                    }
+                ]
+            },
+            {
+                "id": 44,
+                "buyerId": 3,
+                "receiverName": "lgd",
+                "address": "123",
+                "shopName": "Apple",
+                "money": 8000,
+                "status": 3,
+                "payStatus": 1,
+                "receiveTime": "2018-12-27 23:00:28",
+                "createTime": "2018-12-26 17:34:06",
+                "updateTime": "2018-12-26 17:40:26",
+                "orderDetailDataList": [
+                    {
+                        "productId": 25,
+                        "productName": "iPhone 8",
+                        "amount": 1,
+                        "price": 8000
+                    }
+                ]
+            }
+        ]
+    }
 }
 ```
 字段解释
