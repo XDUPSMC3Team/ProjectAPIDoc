@@ -789,3 +789,121 @@ POST /seller/shop/order/{masterId}
 ```
 status 订单状态（0已下单/1已发货/2运输中/3已收货/4已评价/5退货中/6退货成功）
 ```
+
+# 为自己的商铺打广告
+
+```
+POST /seller/shop/advertisement/{shopId}
+```
+
+参数
+
+```
+{
+    "money":""
+}
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data":"":
+}
+```
+字段解释
+
+```
+```
+
+# 为自己的商品打广告
+
+```
+POST /seller/product/advertisement/{productId}
+```
+
+参数
+
+```
+{
+    "money":""
+}
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data":"":
+}
+```
+字段解释
+
+```
+```
+
+# 查看销售历史（需分为每日，每周，每月，每年展示 | daily, weekly, monthly, yearly）告
+
+```
+Get /seller/shop/saleHistory/date/{shopId}
+```
+
+参数
+
+```
+{
+    "date":"yyyy-MM-dd"(可选)
+}
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data":{
+
+    }:
+}
+```
+字段解释
+
+```
+```
+# 查看利润（需分为每日，每周，每月，每年展示 | daily, weekly, monthly, yearly）告
+
+```
+Get /seller/shop/income/date/{shopId}
+```
+
+参数
+
+```
+{
+    "date":"yyyy-MM-dd"(可选)
+}
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": {
+        "daily": null,
+        "weekly": 18300,
+        "monthly": 18300,
+        "yearly": 18300
+    }
+}
+```
+字段解释
+
+```
+```
