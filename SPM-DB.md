@@ -146,3 +146,13 @@
 - create_time 创建时间
 - update_time 更新时间
 - deleted 逻辑删除
+
+## comment 评论表
+
+- id
+- buyer_id
+- product_id
+- order_detail_id
+- content
+- Create_time
+- Update_time

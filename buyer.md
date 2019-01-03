@@ -499,6 +499,39 @@ GET /buyer/viewCart
 此处的id，在之后update和delete中作为cartId使用，即购物车条目ID
 ```
 
+## 从购物车中下单
+
+```
+POST /buyer/orderByCart
+```
+
+参数
+
+```
+传一个数组，即上面购物车接口中的id，即购物车条目id,如[3,14,30]
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": [
+        66,
+        67
+    ]
+}
+```
+
+参数说明
+
+```
+返回的数组是订单的masterId，即生成的几个主订单id。有几个商铺的商品就会有几个主订单。
+```
+
+
+
 ## 更新购物车中某商品的数量
 
 ```
@@ -624,7 +657,7 @@ amount int required
 }
 ```
 
-## 从购物车中下单
+
 
 ## 查看订单列表
 
@@ -653,6 +686,7 @@ GET /buyer/order
             "payStatus": 1,
             "orderDetailList": [
                 {
+                	"orderDetailId": 43,
                     "productId": 25,
                     "productName": "iPhone 8",
                     "price": 8000,
@@ -703,6 +737,7 @@ GET /buyer/order/{orderId}
         "payStatus": 1,
         "orderDetailList": [
             {
+            	"orderDetailId": 43,
                 "productId": 25,
                 "productName": "iPhone 8",
                 "price": 8000,
@@ -787,6 +822,35 @@ PUT /buyer/order/{orderId}/confirm
     "msg": "success",
     "data": null
 }
+```
+
+## 评价订单
+
+```
+POST /buyer/order/comment
+```
+
+参数
+
+```
+orderDetailId int required 订单详情中的orderDetailId，针对订单中某一商品
+content string required 评价内容
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": null
+}
+```
+
+补充说明
+
+```
+评价的订单需要状态为“已收货”，即status为3
 ```
 
 
@@ -994,6 +1058,99 @@ GET /shop/{shopId}
     }
 }
 ```
+
+## 查询历史订单（分时）
+
+```
+GET /buyer/order/byDate
+```
+
+参数
+
+```
+date string required  例如：2018-09-20
+type int required  1-当日，2-当周，3-当月，4-当年
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": [
+        {
+            "id": 1,
+            "shopId": 1,
+            "money": 24000,
+            "status": 0,
+            "payStatus": 1,
+            "orderDetailList": [
+                {
+                	"orderDetailId": 43,
+                    "productId": 25,
+                    "productName": "iPhone 8",
+                    "price": 8000,
+                    "amount": 3
+                }
+            ],
+            "receiveTime": null,
+            "createTime": "2018-12-20 13:57:25",
+            "updateTime": "2018-12-20 13:57:25"
+        }
+    ]
+}
+```
+
+## 搜索历史订单
+
+```
+GET /buyer/order/search
+```
+
+参数
+
+```
+key string required
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": [
+        {
+            "id": 1,
+            "shopId": 1,
+            "money": 24000,
+            "status": 0,
+            "payStatus": 1,
+            "orderDetailList": [
+                {
+                	"orderDetailId": 43,
+                    "productId": 25,
+                    "productName": "iPhone 8",
+                    "price": 8000,
+                    "amount": 3
+                }
+            ],
+            "receiveTime": null,
+            "createTime": "2018-12-20 13:57:25",
+            "updateTime": "2018-12-20 13:57:25"
+        }
+    ]
+}
+```
+
+
+
+
+
+
+
+
 
 
 
