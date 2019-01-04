@@ -1102,3 +1102,90 @@ Get /seller/shop/income/date/{shopId}
 
 ```
 ```
+
+# 查询账户余额
+
+```
+Get /seller/shop/account/{shopId}
+```
+
+参数
+
+```
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": 5000
+}
+```
+字段解释
+
+```
+```
+
+# 提现
+
+```
+POST /seller/shop/account/withdraw
+```
+
+参数
+
+```
+{
+    "shopId":integer,
+    "accountId":"",
+    "money":(double)
+}
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": null
+}
+```
+字段解释
+
+```
+```
+# 查询所有的提款记录
+
+```
+Get /seller/shop/withdraw/{shopId}
+```
+
+参数
+
+```
+```
+
+返回
+
+```
+{
+    "code": 0,
+    "msg": "success",
+    "data": [
+        {
+            "id": 1,
+            "name": "Apple",
+            "account": "18829535783",
+            "money": 100,
+            "createTime": "2019-01-04 21:31:38"
+        }
+    ]
+}
+```
+字段解释
+
+```
+```
